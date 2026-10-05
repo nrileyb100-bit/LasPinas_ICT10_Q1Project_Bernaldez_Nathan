@@ -1,4 +1,4 @@
-from pyscript import display, document, html
+from pyscript import display, document, HTML
 
 def SKU_generator(e):
     category_el = document.getElementById('Category')
@@ -49,7 +49,7 @@ def create_order(e):
     <h3><strong>Total: ₱{total:.2f}</strong></h3></center>
     """
 
-    display(html(receipt), target="show", append=False)
+    display(HTML(receipt), target="show", append=False)
 
 
 
