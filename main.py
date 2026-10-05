@@ -20,7 +20,6 @@ def SKU_generator(e):
    
     display("SKU: " + sku, target='sku_output')
 
-
 def create_order(e):
     items = [
         document.getElementById("item1"),
@@ -42,13 +41,17 @@ def create_order(e):
     tax = subtotal * tax_rate
     total = subtotal + tax
    
-    receipt = f"""<center><h3>==== Receipt ====</h3>
-<p>Subtotal: ₱{subtotal:.2f}</p>
-<p>VAT: ₱{tax:.2f}</p>
-<h3><strong>Total: ₱{total:.2f}</strong></h3></center>"""
+    receipt = f"""
+    <center><h3>==== Receipt ====</h3>
+    <p>Subtotal: ₱{subtotal:.2f}</p>
+    <p>VAT: ₱{tax:.2f}</p>
+    <h3><strong>Total: ₱{total:.2f}</strong></h3></center>
+    """
 
-    display(HTML(receipt), target="show", append=False)
-
+    # Force raw HTML insertion directly into the target element
+    show_container = document.getElementById("show")
+    if show_container:
+        show_container.innerHTML = receipt
 
 
     
