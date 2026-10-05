@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKU</title>
+    <!-- Updated PyScript 2026.3.1 Links -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+<style>
+    body{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(128, 107, 79);
+    }
+
+    nav{
+        text-align: left;
+        transition: transform 0.2s;
+    }
+
+    .nav-item:hover{
+        transform: translateY(-5px);
+    }
+
+     a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card-container {
+        display: flex;
+        gap: 5px; 
+    }
+
+    .info-card {
+        height: 100%;
+        display: flex; 
+        gap: 5px;      
+        transition: transform 0.2s;
+        padding: 10px 15px;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+    }
+
+</style>
+
+</head>
+<body>
+
+    <hr>
+<nav class="navbar">
+    <div class="card-container">
+    <div class="info-card"><a href="index.html"> Home</a></div>
+    <div class="info-card"><a href="project.html"> SKU Generator</a></div>
+    <div class="info-card"><a href="skillstest.html"> Receipt Generator</a></div>
+    </div>
+</nav>
+
+    <hr>
+
+    <!-- 1. SKU GENERATOR FORM -->
+    <h2>SKU Generator</h2>
+    <label for="Category"><p>Category</p></label>
+                <select name="Category" id="Category">
+                    <option value="None">None</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Non-fiction">Non-fiction</option>
+                    <option value="Research">Research</option>
+                </select><br><br>
+                <p>Title</p>
+    <input type="text" id="prod_name" placeholder="Product Title"><br><br>
+                <p>Quantity</p>
+    <input type="number" id="quantity" placeholder="Quantity"><br>
+    <br>
+    <br>
+    <button py-click="SKU_generator">Generate SKU</button><br><br>
+
+    <hr>
+    <div id="sku_output"></div>
+    <hr>
+
+    <!-- Links your Python file (change "main.py" if your script has a different name) -->
+    <script type="py" src="main.py" config='{"packages":[]}'></script>
+
+</body>
+</html>

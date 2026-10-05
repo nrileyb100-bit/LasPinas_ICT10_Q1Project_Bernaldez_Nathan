@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SKU & Order Calculator</title>
+    <!-- Load PyScript CSS and JS -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+<body>
+
+    <!-- Your HTML UI Elements matching the IDs in your Python code -->
+    <h2>SKU Generator</h2>
+    <input type="text" id="category" placeholder="Category (e.g., Electronics)">
+    <input type="text" id="product_name" placeholder="Product Name">
+    <input type="text" id="quantity" placeholder="Quantity">
+    <button py-click="SKU_generator">Generate SKU</button>
+    <div id="sku_output"></div>
+
+    <h2>Order Form</h2>
+    <label><input type="checkbox" id="item1" value="100.00"> Item 1 (₱100)</label><br>
+    <label><input type="checkbox" id="item2" value="250.00"> Item 2 (₱250)</label><br>
+    <label><input type="checkbox" id="item3" value="50.00"> Item 3 (₱50)</label><br>
+    <label><input type="checkbox" id="item4" value="500.00"> Item 4 (₱500)</label><br>
+    <label><input type="checkbox" id="item5" value="75.00"> Item 5 (₱75)</label><br>
+    <button py-click="create_order">Create Order</button>
+    <div id="show"></div>
+
+    <!-- Link your Python script -->
+    <script type="py" src="./main.py"></script>
+</body>
+</html>

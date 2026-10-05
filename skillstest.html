@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKU & Order App</title>
+    <!-- Updated PyScript 2026.3.1 Links -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+<style>
+    body{
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        background-color: rgb(128, 107, 79);
+    }
+
+    nav{
+        text-align: left;
+        transition: transform 0.2s;
+    }
+
+    .nav-item:hover{
+        transform: translateY(-5px);
+    }
+
+     a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .card-container {
+        display: flex;
+        gap: 5px; 
+    }
+
+    .info-card {
+        height: 100%;
+        display: flex; 
+        gap: 5px;      
+        transition: transform 0.2s;
+        padding: 10px 15px;
+    }
+
+    .info-card:hover {
+        transform: translateY(-5px);
+    }
+
+</style>
+
+</head>
+<body>
+
+    <hr>
+<nav class="navbar">
+    <div class="card-container">
+    <div class="info-card"><a href="index.html"> Home</a></div>
+    <div class="info-card"><a href="project.html"> SKU Generator</a></div>
+    <div class="info-card"><a href="skillstest.html"> Receipt Generator</a></div>
+    </div>
+</nav>
+
+    <hr>
+
+    <!-- 2. ORDER CHECKBOXES -->
+    <h2>Create Order</h2>
+    <label><input type="checkbox" id="item1" value="89.29"> The Prince by Niccolo Machiavelli (₱89.29)</label><br><br>
+    <label><input type="checkbox" id="item2" value="89.29"> Head of the Family by Anton Chekov (₱89.29)</label><br><br>
+    <label><input type="checkbox" id="item3" value="89.29"> A Rose for Emily by William Faulkner (₱89.29)</label><br><br>
+    <label><input type="checkbox" id="item4" value="133.93"> Two Books, Your Choice (₱133.93)</label><br><br>
+    <label><input type="checkbox" id="item5" value="446.43"> All books  (₱446.43)</label><br><br><br>
+    <button py-click="create_order">Calculate Receipt</button><br><br>
+
+    <hr>
+    
+    <!-- Receipt output container -->
+    <div id="show"></div>
+
+    <hr>
+
+    <!-- Links your Python file (change "main.py" if your script has a different name) -->
+    <script type="py" src="main.py" config='{"packages":[]}'></script>
+
+</body>
+</html>
