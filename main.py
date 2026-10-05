@@ -49,7 +49,7 @@ def create_order(e):
     <h3><strong>Total: ₱{total:.2f}</strong></h3></center>
     """
 
-    display(receipt, target="show", append=False)
+    display(html(receipt), target="show", append=False)
 
 
 
