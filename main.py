@@ -1,4 +1,4 @@
-from pyscript import display, document
+from pyscript import display, document, html
 
 def SKU_generator(e):
     category_el = document.getElementById('Category')
